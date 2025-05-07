@@ -39,7 +39,7 @@ router.get('/download/:course_material_id', verifyToken, async (req, res) => {
     }
 
     const fileUrl = result.rows[0].file_url;
-    const filePath = path.join(__dirname, '..', 'uploads', fileUrl);
+    const filePath = path.join(__dirname, '..', 'files', fileUrl);
 
     console.log("Путь к файлу:", filePath);
     if (!fs.existsSync(filePath)) {
