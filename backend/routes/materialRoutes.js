@@ -38,7 +38,7 @@ router.get('/', async (req, res) => {
     JOIN CourseTemplates ct ON cm.template_id = ct.id
     JOIN Accounts a ON cm.created_by = a.id
     WHERE cm.is_available = TRUE 
-   ORDER BY cm.id DESC
+    ORDER BY cm.id DESC
   `);
   res.json(result.rows);
 });
